@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+
+<HTML>
+
+<HEAD>
+<TITLE> Libros de Isabel Allende </TITLE>
+<META name="description" content="Libros de Isabel Allende"
+<META name="keywords" content="libros" "novelas" "relatos" "autobiograficos" "teatro" "isabel" "escritores"
+<title>  </title>  
+
+<style type="text/css">
+* { padding: 0; margin: auto; text-align: center  }
+#cabecera { background-color: #ebd9c6; }  
+h2 { font: bold 1.5em perpetua; padding: 0.5em; }
+
+#principal { background-color: #ebd9c6; }
+p { font: 0.9em palatino; text-align: justify;
+           text-indent: 3em; padding: 0.5em 2em; }
+li { font: 0.9em palatino; text-align: justify;
+           text-indent: 3em; padding: 0.5em 2em; }
+h4 { font: bold 1.5em perpetua; text-align: center;
+            text-ident: 3em; padding: 0.5em }
+label { font: 0.9em palatino; text-align: center;
+           text-indent: 3em; padding: 0.5em 2em; }
+</style>
+
+<script>
+  function agregarComentario() {
+    const listaComentarios = document.getElementById('lista-comentarios');
+    const nombre = document.getElementById('nombre').value;
+    const comentario = document.getElementById('comentario').value;
+
+    const nuevoComentario = document.createElement('li');
+    const textoComentario = document.createTextNode(nombre + ": " + comentario)
+    nuevoComentario.appendChild(textoComentario);
+    listaComentarios.appendChild(nuevoComentario);
+  }
+</script>
+
+</head>
+
+<body>
+	<body bgcolor=#ebd9c6>
+
+<div id="cabecera">
+  <font size="6"> <h2> Libros de Isabel Allende </h2> </font>
+</div>
+
+<div id="principal">
+<font size="5">
+
+<center> <img src="descarga.jpg" alt="img"
+     widht="360" height="430"> </center>
+
+<p class="text-justify">
+ Abordando temáticas relacionadas a la mujer, la memoria, el imaginario latinoamericano y 
+ su propia biografía, Isabel Allende se convierte en una de las figuras más importantes 
+ para la literatura chilena y de habla hispana. A continuación, podrás encontrar una lista 
+ con los nombres de todas sus creaciones, separadas en categorías según si corresponden a
+ novelas, relatos, autobiográficos u obras teatrales.
+</p>
+
+<li> <a href="file:///E:/Pagina/novelas.html" style="color:#330000"> Novelas </a> </li>
+<li> <a href="file:///E:/Pagina/relatos.html" style="color:#330000"> Relatos </a> </li>
+<li> <a href="file:///E:/Pagina/autobiograficos.html" style="color:#330000"> Autobiográficos </a> </li>
+<li> <a href="file:///E:/Pagina/teatro.html" style="color:#330000"> Teatro </a> </li>
+
+<font size="4"> <h4> ¿Cuál es tu libro favorito de Isabel Allende? </h4> </font>
+
+<ul id="lista-comentarios"></ul>
+
+<label for="nombre"> Título </label>
+<input type="text" id="nombre">
+
+<br>
+
+<label for="comentario"> ¿Por qué escogiste este libro? </label>
+<input type="text" id="comentario">
+
+<br>
+
+<input type='button' onclick='agregarComentario()' value='Comentar' />
+
+</div>
+
+<br>
+<br>
+<br>
+
+
+</font>
+
+</body>
+
+</html>
